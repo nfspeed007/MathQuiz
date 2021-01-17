@@ -109,6 +109,9 @@ namespace MathQuiz
         public Form1()
         {
             InitializeComponent();
+
+            // Displays the current date in day month year form.
+            currentDate.Text = DateTime.Now.ToString("d MMMM yyyy");
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -163,6 +166,16 @@ namespace MathQuiz
                 int lengthOfAnswer = answerBox.Value.ToString().Length;
                 answerBox.Select(0, lengthOfAnswer);
             }
+        }
+
+        private void currentDate_Click(object sender, EventArgs e)
+        {
+            currentDate.Text = DateTime.Now.ToString("d MMMM yyyy");
+        }
+
+        private void currentDate_MouseEnter(object sender, EventArgs e)
+        {
+            currentDate.Text = DateTime.Now.ToString("d MMMM yyyy");
         }
     }
 }
